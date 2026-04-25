@@ -6,17 +6,17 @@ Open MICKY
 ---
 
 <div style="text-align: justify;">
-  The high cost of commercial mobile robot platforms remains a significant barrier for teams entering competitive and research environments such as RoboCup@Work, particularly in regions with limited funding, such as Latin America. This barrier often restricts participation and slows down the development of new robotics solutions.
+  O alto custo das plataformas comerciais de robôs móveis ainda representa uma barreira significativa para equipes que desejam ingressar em ambientes competitivos e de pesquisa, como o RoboCup@Work, especialmente em regiões com recursos limitados, como a América Latina. Essa barreira frequentemente restringe a participação e desacelera o desenvolvimento de novas soluções em robótica.
 
-  MICKY was developed to address this challenge by providing a low-cost, open-source omnidirectional mobile base designed to be modular and mechanically capable. The platform follows a design philosophy similar to other accessible robotic bases, focusing on enabling new teams and researchers to enter the field of mobile robotics.
+  O MICKY foi desenvolvido para enfrentar esse desafio, oferecendo uma base móvel omnidirecional de baixo custo e de código aberto, projetada para ser modular e mecanicamente robusta. A plataforma segue uma filosofia de design semelhante à de outras bases robóticas acessíveis, com foco em permitir que novas equipes e pesquisadores ingressem na área de robótica móvel.
 
-  The system adopts a modular architecture based on 40×40 T-slot aluminum extrusions combined with a Mecanum wheel drive system, enabling full holonomic motion while supporting significant payloads.
-  
-  Rather than relying on expensive proprietary solutions, MICKY is built using Commercial Off-The-Shelf (COTS) components and a simplified mechanical design. This approach enables a high payload-to-cost ratio while maintaining ease of assembly, maintenance, and customization.
+  O sistema adota uma arquitetura modular baseada em perfis de alumínio com ranhura em T de 40×40, combinados com um sistema de tração por rodas Mecanum, possibilitando movimento holonômico completo enquanto suporta cargas úteis significativas.
 
-  The platform is designed to support applications such as mobile manipulation, autonomous navigation, and robotics research, while allowing straightforward integration of sensors, actuators, and additional subsystems.
+  Em vez de depender de soluções proprietárias caras, o MICKY é construído utilizando componentes comerciais prontos para uso (COTS) e um design mecânico simplificado. Essa abordagem permite uma alta relação carga útil/custo, mantendo a facilidade de montagem, manutenção e customização.
 
-  Ultimately, MICKY aims to democratize access to mobile robotics by providing a scalable, reproducible, and economically viable platform for students, researchers, and robotics teams.
+  A plataforma é projetada para suportar aplicações como manipulação móvel, navegação autônoma e pesquisa em robótica, além de permitir a integração direta de sensores, atuadores e subsistemas adicionais.
+
+  Por fim, o MICKY tem como objetivo democratizar o acesso à robótica móvel, oferecendo uma plataforma escalável, reproduzível e economicamente viável para estudantes, pesquisadores e equipes de robótica.
 </div>
 
 ![image](./_static/micky.jpeg)

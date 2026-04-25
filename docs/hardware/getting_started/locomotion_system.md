@@ -1,34 +1,34 @@
-# ⚙️ Locomotion System
+# ⚙️ Sistema de Locomoção
 
 <div style="text-align: justify;">
 
-MICKY uses a Mecanum wheel-based locomotion system, enabling omnidirectional motion without requiring rotation of the robot body.
+O MICKY utiliza um sistema de locomoção baseado em rodas Mecanum, permitindo movimento omnidirecional sem a necessidade de rotação do corpo do robô.
 
-The system adopts a hybrid control architecture, where high-level processing is performed on a computer running **ROS 2 Humble**, while low-level control is handled by dedicated hardware. This separation ensures real-time motor actuation while maintaining flexibility for planning and decision-making.
+O sistema adota uma arquitetura de controle híbrida, na qual o processamento de alto nível é realizado em um computador executando **ROS 2 Humble**, enquanto o controle de baixo nível é realizado por hardware dedicado. Essa separação garante atuação dos motores em tempo real, mantendo flexibilidade para planejamento e tomada de decisão.
 
-This design is widely used in mobile robotics applications, providing improved maneuverability, scalability, and system robustness.
-
----
-
-## Hardware Configuration
-
-Motor control is managed by an **Arduino Mega 2560**, which interfaces with four **TB6600 drivers**. These drivers are responsible for actuating **Nema 23 stepper motors**.
-
-For navigation and state estimation, the robot uses **MPU6050 sensors** connected via the I2C bus.
+Esse tipo de arquitetura é amplamente utilizado em aplicações de robótica móvel, proporcionando maior manobrabilidade, escalabilidade e robustez do sistema.
 
 ---
 
-## Robot Kinematics
+## Configuração de Hardware
 
-The robot uses **Mecanum wheels**, enabling omnidirectional motion through the combination of individual wheel velocities.
+O controle dos motores é gerenciado por um **Arduino Mega 2560**, que se comunica com quatro **drivers TB6600**. Esses drivers são responsáveis pela atuação dos **motores de passo Nema 23**.
 
-The system kinematics is based on converting the robot’s velocity commands, defined by the linear velocities in X (`v_x`) and Y (`v_y`), along with the angular velocity (`ω`), into individual wheel velocities.
+Para navegação e estimativa de estado, o robô utiliza sensores **MPU6050**, conectados por meio do barramento I2C.
 
-This allows:
+---
 
-- Forward and backward motion  
-- Lateral (sideways) motion  
-- Rotation  
-- Combined movements (e.g., diagonal motion)  
+## Cinemática do Robô
+
+O robô utiliza **rodas Mecanum**, permitindo movimento omnidirecional por meio da combinação das velocidades individuais de cada roda.
+
+A cinemática do sistema é baseada na conversão dos comandos de velocidade do robô, definidos pelas velocidades lineares nos eixos X (`v_x`) e Y (`v_y`), juntamente com a velocidade angular (`ω`), em velocidades individuais das rodas.
+
+Isso permite:
+
+- Movimento para frente e para trás
+- Movimento lateral (deslocamento lateral)
+- Rotação
+- Movimentos combinados (por exemplo, movimento diagonal) 
 
 </div>

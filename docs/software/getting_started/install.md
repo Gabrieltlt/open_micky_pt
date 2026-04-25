@@ -1,25 +1,25 @@
-# ⬇️ Install MICKY
+# ⬇️ Instalar o MICKY
 
 <div style="text-align: justify;">
 
-To install MICKY, follow the commands below.
+Para instalar o MICKY, siga os comandos abaixo.
 
 ---
 
-## Requirements
+## Requisitos
 
-Make sure you have the following installed:
+Certifique-se de que você possui os seguintes itens instalados:
 
 * Ubuntu 22.04
 * ROS 2 Humble
-* Arduino IDE or PlatformIO
-* Gazebo Harmonic (or Garden)
+* Arduino IDE ou PlatformIO
+* Gazebo Harmonic (ou Garden)
 
 ---
 
-## Install MICKY Base Controller
+## Instalar o Controlador da Base do MICKY
 
-Clone the repository:
+Clone o repositório:
 
 ```bash
 mkdir -p /micky_ws/src && cd micky_ws/src
@@ -29,82 +29,82 @@ cd micky_base_controller
 
 ---
 
-## Firmware Setup
+## Configuração do Firmware
 
-Upload the firmware to the Arduino Mega:
+Faça o upload do firmware para o Arduino Mega:
 
-1. Open the firmware file:
+1. Abra o arquivo de firmware:
 
 ```bash
 firmware_micro_controller/firmware.ino
 ```
 
-2. Connect the Arduino
+2. Conecte o Arduino
 
-3. Configure in Arduino IDE:
+3. Configure na Arduino IDE:
 
-* Board: **Arduino Mega 2560**
-* Port: `/dev/ttyACM0` or `/dev/ttyUSB0`
+* Placa: **Arduino Mega 2560**
+* Porta: `/dev/ttyACM0` ou `/dev/ttyUSB0`
 
-4. Click **Upload**
+4. Clique **Upload**
 
 ---
 
-## USB Configuration (udev)
+## Configuração USB (udev)
 
-Configure a persistent device name for the Arduino.
+Configure um nome de dispositivo persistente para o Arduino.
 
-### Get device information
+### Obter informações do dispositivo
 
 ```bash
 udevadm info -a -n /dev/ttyACM0 | grep -E 'idVendor|idProduct|serial'
 ```
 
-### Create udev rule
+### Criar regra udev
 
 ```bash
 sudo nano /etc/udev/rules.d/99-arduino_robo.rules
 ```
 
-Add:
+Adicione:
 
 ```bash
 SUBSYSTEM=="tty", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0043", MODE="0666", SYMLINK+="arduino_robo"
 ```
 
-### Reload rules
+### Recarregar regras
 
 ```bash
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### Verify device
+### Verificar dispositivo
 
 ```bash
 ls /dev/arduino_robo
 ```
 
-### (Optional) Add user permissions
+### (Opcional) Adicionar permissões ao usuário
 
 ```bash
 sudo usermod -aG dialout $USER
 ```
 
-Log out and log back in after running this command.
+Faça logout e login novamente após executar esse comando.
 
 ---
 
-## Install MICKY Simulation
+## Instalar a Simulação do MICKY
 
-Navigate to your workspace source directory and clone the repository:
+Navegue até o diretório src do workspace e clone o repositório:
 
 ```bash
 cd ~/micky_ws/src
 git clone https://github.com/FBOTWork/micky_simulation.git
 ```
 
-Install rosdep dependencies:
+Instale as dependências com rosdep:
 
 ```bash
 cd ~/micky_ws
@@ -112,7 +112,7 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
-Install required ROS 2 packages:
+Instale os pacotes ROS 2 necessários:
 
 ```bash
 sudo apt install -y \
@@ -127,9 +127,9 @@ sudo apt install -y \
 
 ---
 
-## Building the Workspace
+## Compilando o Workspace
 
-Run **once** after cloning or modifying package files:
+Execute **uma vez** após clonar ou modificar os pacotes:
 
 ```bash
 cd ~/micky_ws

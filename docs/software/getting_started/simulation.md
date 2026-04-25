@@ -1,56 +1,56 @@
-# 🧪 MICKY Simulation
+# 🧪 Simulação do MICKY
 
 <div style="text-align: justify;">
 
-This section guides you through running the MICKY simulation environment using Gazebo and ROS 2.
+Esta seção orienta você na execução do ambiente de simulação do MICKY utilizando Gazebo e ROS 2.
 
 ---
 
-## Step 1 — Launch Gazebo
+## Passo 1 — Iniciar o Gazebo
 
-1. Opens Gazebo Harmonic with the `turtlebot3_world` world and spawns the Micky robot.
+1. Abre o Gazebo Harmonic com o mundo `turtlebot3_world` e insere o robô MICKY na simulação.
 
 ```bash
 ros2 launch micky_simulation gazebo.launch.py
 ```
 
-Wait until Gazebo GUI is fully open and the robot model is visible in the scene.
+Aguarde até que a interface gráfica do Gazebo esteja completamente carregada e o modelo do robô esteja visível no cenário.
 
 ---
 
-## Step 2 — Launch SLAM
+## Passo 2 — Iniciar o SLAM
 
-2. In a **new terminal**, start the SLAM node and RViz:
+2. Em um **novo terminal**, inicie o nó de SLAM e o RViz:
 
 ```bash
 ros2 launch micky_slam sim_slam.launch.py
 ```
 
-RViz will open with the `/map` topic displayed. The map starts empty and is built as the robot moves.
+O RViz será aberto exibindo o tópico `/map`. O mapa começa vazio e é construído conforme o robô se movimenta.
 
 ---
 
-## Step 3 — Drive the Robot (Teleop)
+## Passo 3 — Controlar o Robô (Teleop)
 
-3. In a **third terminal**, start the keyboard teleop:
+3. Em um **terceiro terminal**, inicie o teleop com teclado:
 
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
-| Key | Action |
-|---|---|
-| `i` / `,` | Forward / backward |
-| `j` / `l` | Strafe left / right |
-| `u` / `o` | Rotate left / right |
-| `space` | Stop |
-| `w` / `x` | Increase / decrease linear speed |
+| Tecla | Ação |
+|-------|------|
+| `i` / `,` | Avançar / Recuar |
+| `j` / `l` | Deslocar para esquerda / direita |
+| `u` / `o` | Girar à esquerda / direita |
+| `space` | Parar |
+| `w` / `x` | Increase / Aumentar / diminuir velocidade linear |
 
-Drive the robot around the entire environment. The map in RViz fills in as new areas are scanned. For best results, make at least one full loop so slam_toolbox can close the loop.
+Movimente o robô por todo o ambiente. O mapa no RViz será preenchido à medida que novas áreas forem escaneadas. Para melhores resultados, percorra pelo menos um ciclo completo no ambiente, permitindo que o `slam_toolbox` realize o fechamento de loop.
 
 ---
 
-4. The robot can be vizualized and controled with teleop, like the image below: 
+4. O robô pode ser visualizado e controlado via teleop, como mostrado abaixo:
 
 <div align="center">
 <video width="60%" controls>
@@ -58,41 +58,41 @@ Drive the robot around the entire environment. The map in RViz fills in as new a
 </video>
 </div>
 
-## Step 4 — Save the Map
+## Passo 4 — Salvar o Mapa
 
-Once the environment is fully mapped, run in any terminal:
+Após mapear completamente o ambiente, execute em qualquer terminal:
 
 ```bash
 ros2 run nav2_map_server map_saver_cli -f ~/micky_map
 ```
 
-This generates two files:
-- `~/your_map.pgm` — the occupancy grid image
-- `~/your_map.yaml` — metadata (resolution, origin, thresholds)
+Isso irá gerar dois arquivos:
+- `~/your_map.pgm` — imagem do mapa de ocupação
+- `~/your_map.yaml` — metadados (resolução, origem, limiares)
 
 ---
 
-## Common Troubleshooting
+## Problemas Comuns
 
-### Gazebo does not open / freezes on startup
+### Gazebo não abre / trava na inicialização
 
 ```bash
 pkill -f gz_sim && pkill -f gzserver
 unset IGN_PARTITION GZ_PARTITION
 ```
 
-Then re-run Step 1.
+Em seguida, execute novamente o Passo 1.
 
-### Map stays empty in RViz
+### O mapa permanece vazio no RViz
 
-1. Check that the LiDAR is publishing:
+1. Verifique se o LiDAR está publicando dados:
    ```bash
    ros2 topic echo /laser_scan_front
    # Expected: ~10 Hz
    ```
-2. Move the robot — slam_toolbox only registers a new scan after the robot travels at least **0.5 m**.
+2. Movimente o robô — o `slam_toolbox` só registra uma nova leitura após o robô percorrer pelo menos **0,5 m**.
 
-### Robot does not move
+### O robô não se move
 
 ```bash
 # Test the command manually
@@ -100,6 +100,6 @@ ros2 topic pub /cmd_vel geometry_msgs/msg/Twist \
   "{linear: {x: 0.2, y: 0.0, z: 0.0}, angular: {z: 0.0}}" --once
 ```
 
-If the robot moves in Gazebo but not from teleop, make sure the teleop terminal has focus (keyboard input is captured there).
+Se o robô se mover no Gazebo, mas não via teleop, verifique se o terminal do teleop está em foco (a entrada do teclado é capturada nele).
 
 </div>

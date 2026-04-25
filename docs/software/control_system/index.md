@@ -1,57 +1,57 @@
-# 🧠 Control System
+# 🧠 Sistema de Controle
 
 <div style="text-align: justify;">
 
-The MICKY control system follows a hybrid architecture, combining high-level processing with low-level embedded control.
+O sistema de controle do MICKY segue uma arquitetura híbrida, combinando processamento de alto nível com controle embarcado de baixo nível.
 
-This section presents the locomotion control system of MICKY.
+Esta seção apresenta o sistema de controle de locomoção do MICKY.
 
 ---
 
-## Communication
+## Comunicação
 
-Communication between the onboard computer and the microcontroller is performed via a serial interface.
+A comunicação entre o computador embarcado e o microcontrolador é realizada por meio de uma interface serial.
 
-Velocity commands are transmitted using the following format:
+Os comandos de velocidade são transmitidos utilizando o seguinte formato:
 
 ```text
 <v_x, v_y, ω>
 ```
 
-This lightweight protocol ensures low-latency communication between high-level and low-level systems.
+Esse protocolo leve garante comunicação de baixa latência entre os sistemas de alto e baixo nível.
 
 ---
 
-## Microcontroller Firmware
+## Firmware do Microcontrolador
 
-The microcontroller firmware is designed for low-latency and non-blocking execution.
+O firmware do microcontrolador foi projetado para execução de baixa latência e não bloqueante.
 
-It uses the `Wire.h` and `AccelStepper.h` libraries to ensure efficient motor control and sensor communication.
+Ele utiliza as bibliotecas `Wire.h` e `AccelStepper.h` para garantir controle eficiente dos motores e comunicação com sensores.
 
-The main control loop consists of:
+O loop principal de controle é composto por:
 
-1. Serial command reception  
-2. Safety mechanism (fail-safe)  
-3. Kinematic processing  
-4. Sensor acquisition  
-5. Motor control  
+1. Recepção de comandos via serial  
+2. Mecanismo de segurança (fail-safe)
+3. Processamento cinemático 
+4. Aquisição de sensores
+5. Controle dos motores 
 
-Telemetry includes:
+A telemetria inclui:
 
-- orientation  
-- acceleration  
-- angular velocity  
-- temperature  
+- orientação
+- aceleração
+- velocidade angular
+- temperatura
 
 ---
 
-## ROS 2 Integration
+## Integração com ROS 2
 
-The system is integrated with ROS 2 through two main nodes:
+O sistema é integrado ao ROS 2 por meio de dois nós principais:
 
-- **CmdVelToSerial** — converts velocity commands into serial messages  
-- **ImuSerialPublisher** — publishes IMU data  
+- **CmdVelToSerial** — converte comandos de velocidade em mensagens seriais
+- **ImuSerialPublisher** — publica dados da IMU
 
-This architecture allows seamless integration with higher-level navigation and control frameworks.
+Essa arquitetura permite integração direta com frameworks de navegação e controle de alto nível.
 
 </div>

@@ -2,21 +2,21 @@
 
 <div style="text-align: justify;">
 
-Here we will show how to install and run MICKY robot.
+Aqui mostramos como instalar e executar o robô MICKY.
 
-## 🚀 Quick Guide
+## 🚀 Guia Rápido
 ```{note}
-If this is your first time using MICKY, it is recommended to start with keyboard teleoperation to get familiar with the system.
+Se esta for sua primeira vez utilizando o MICKY, recomenda-se iniciar com a teleoperação via teclado para se familiarizar com o sistema.
 ```
 
-1. **Install MICKY**: Follow the installation steps in the section below.
-2. **Choose a control method**:
-    - Keyboard Teleop — simple and quick testing
-    - Xbox Controller Teleop — smoother and more precise control
-3. **Run MICKY**: After installation, launch the system and start controlling the robot using your preferred method.
+1. **Instalar o MICKY**: Siga as etapas de instalação na seção abaixo.
+2. **Escolher um método de controle**:
+    - Teleop com teclado — simples e rápido para testes
+    - Teleop com controle Logitech — controle mais suave e preciso
+3. **Executar o MICKY**: Após a instalação, inicie o sistema e comece a controlar o robô utilizando o método escolhido.
 
 ```{note}
-For the basic version of MICKY, no onboard computer is required. Just use your laptop as the main system.
+Para a versão básica do MICKY, não é necessário um computador embarcado. Basta utilizar seu notebook como sistema principal.
 ```
 
 ```{toctree}

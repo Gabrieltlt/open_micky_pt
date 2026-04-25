@@ -1,32 +1,32 @@
-# 📊 Comparative Analysis
+# 📊 Análise Comparativa
 
 <div style="text-align: justify;">
 
-## Introduction
+## Introdução
 
-The development of low-cost and accessible robotic platforms remains a critical challenge for teams entering competitive and research-oriented environments such as RoboCup@Industrial, particularly in regions with limited funding such as Latin America. High costs associated with commercial mobile bases often create a significant barrier to entry, restricting participation and slowing down innovation.
+O desenvolvimento de plataformas robóticas acessíveis e de baixo custo ainda representa um desafio crítico para equipes que desejam ingressar em ambientes competitivos e de pesquisa, como o RoboCup@Industrial, especialmente em regiões com recursos limitados, como a América Latina. Os altos custos associados às bases móveis comerciais frequentemente criam uma barreira significativa de entrada, restringindo a participação e desacelerando a inovação.
 
-In this context, we present the MICKY mobile base, an omnidirectional robotic platform specifically designed to reduce this barrier by prioritizing cost-efficiency without compromising mechanical capability. The platform adopts a modular architecture based on industrial 40x40 mm aluminum profiles and a Mecanum wheel drive system, enabling holonomic motion and supporting substantial payloads.
+Nesse contexto, apresentamos a base móvel MICKY, uma plataforma robótica omnidirecional projetada especificamente para reduzir essa barreira, priorizando eficiência de custo sem comprometer a capacidade mecânica. A plataforma adota uma arquitetura modular baseada em perfis de alumínio industriais de 40×40 mm e um sistema de tração com rodas Mecanum, permitindo movimento holonômico e suportando cargas úteis significativas.
 
-Rather than relying on expensive proprietary solutions, MICKY is built using Commercial Off-The-Shelf (COTS) components and a simplified mechanical design. This approach allows the platform to achieve a high payload-to-cost ratio while remaining accessible, maintainable, and adaptable to different use cases.
+Em vez de depender de soluções proprietárias caras, o MICKY é construído utilizando componentes comerciais prontos para uso (COTS) e um design mecânico simplificado. Essa abordagem permite que a plataforma alcance uma alta relação carga útil/custo, mantendo-se acessível, de fácil manutenção e adaptável a diferentes aplicações.
 
-The system is designed to support mobile manipulation, autonomous navigation, and general-purpose robotics research, while allowing straightforward integration of sensors, actuators, and additional subsystems. Its modularity ensures that the platform can evolve according to the needs of each team.
+O sistema foi projetado para suportar manipulação móvel, navegação autônoma e pesquisa em robótica de propósito geral, além de permitir a integração direta de sensores, atuadores e subsistemas adicionais. Sua modularidade garante que a plataforma possa evoluir de acordo com as necessidades de cada equipe.
 
-This work also presents a comparative analysis between MICKY and other omnidirectional mobile bases, emphasizing its efficiency in terms of cost versus payload. The results highlight its position as a competitive and accessible alternative for teams seeking high mechanical performance under budget constraints.
+Este trabalho também apresenta uma análise comparativa entre o MICKY e outras bases móveis omnidirecionais, destacando sua eficiência em termos de custo versus carga útil. Os resultados evidenciam sua posição como uma alternativa competitiva e acessível para equipes que buscam alto desempenho mecânico sob restrições orçamentárias.
 
-Ultimately, the goal of this project is to democratize access to mobile robotics by providing a scalable, reproducible, and economically viable platform for new teams and researchers.
+Por fim, o objetivo deste projeto é democratizar o acesso à robótica móvel, fornecendo uma plataforma escalável, reproduzível e economicamente viável para novas equipes e pesquisadores.
 
 ---
 
-## 1. Technical Characterization of the MICKY Base
+## 1. Caracterização Técnica da Base MICKY
 
-The MICKY base features a structure built from industrial 40×40 mm aluminum profiles combined with a Mecanum wheel drive system. Although the hardware includes six motors, the control architecture utilizes four active motors for locomotion.
+A base MICKY possui uma estrutura construída com perfis de alumínio industriais de 40×40 mm, combinados com um sistema de tração por rodas Mecanum. Embora o hardware inclua seis motores, a arquitetura de controle utiliza quatro motores ativos para a locomoção.
 
-- **Total Cost (BOM):** ~$1647.12 USD
-- **Operational Payload:** 32.55 kg
-- **Actuators (Active):** 4× NEMA 23 stepper motors with 30 kgf·cm torque each
-- **Wheels:** Mecanum MEC-100 set (100 mm diameter), with a nominal capacity of 15 kg per wheel
-- **Structure:** Modular chassis using 40×40 mm aluminum profiles (Slot 8)
+- **Custo Total:** ~$1647.12 USD
+- **Carga Útil Operacional:** 32.55 kg
+- **Atuadores (Ativos):** 4× motores de passo NEMA 23 com torque de 30 kgf·cm cada
+- **Rodas:** conjunto Mecanum MEC-100 (diâmetro de 100 mm), com capacidade nominal de 15 kg por roda
+- **Estrutura:** chassi modular com perfis de alumínio 40×40 mm (Slot 8)
 
 <div align="center">
 <video width="40%" controls>
@@ -34,54 +34,54 @@ The MICKY base features a structure built from industrial 40×40 mm aluminum pro
 </video>
 </div>
 
-*Experimental payload validation: MICKY transporting a 20 L load (~20 kg), demonstrating stable locomotion under real-world conditions.*
+*Validação experimental de carga: MICKY transportando um volume de 20 L (~20 kg), demonstrando locomoção estável em condições reais.*
 
-With a traction force of 24 kgf for a payload of 32.55 kg (plus a base mass of ~25 kg), the platform operates with a **traction-to-total weight ratio of approximately 0.41**, ensuring stability during lateral maneuvers without step loss under moderate accelerations.
+Com uma força de tração de 24 kgf para uma carga útil de 32,55 kg (somada a uma massa da base de ~25 kg), a plataforma opera com uma **relação tração/peso total de aproximadamente 0,41**, garantindo estabilidade durante manobras laterais sem perda de passos sob acelerações moderadas.
 
 ---
 
-## 2. Comparative Table: Omnidirectional Bases
+## 2. Tabela Comparativa: Bases Omnidirecionais
 
-Below is a compilation of technical data for the requested platforms, including low-cost models and industrial reference systems.
+A seguir, apresenta-se uma compilação de dados técnicos das plataformas analisadas, incluindo modelos de baixo custo e sistemas industriais de referência.
 
 
-| Model (Label) | Payload (kg) | Cost (USD) | Drive Type | Efficiency ($/kg) |
+| Modelo | Carga Útil (kg) | Custo (USD) | Tipo de Tração | Eficiência ($/kg) |
 |---------------|:------------:|:----------:|:----------:|:-----------------:|
-| MICKY | 32.55 | ~$1647.12 | Mecanum (4-wheel drive) | $50.60 |
-| Wheeltec R550 | 15.00 | ~$532 | Mecanum (4-wheel drive) | $35.46 |
-| myAGV 2023 Pi | 5.00 | ~$949 | Mecanum (planetary) | $189.80 |
-| Mecabot Pro | 22.00 | ~$6,918 | Mecanum (with suspension) | $314.45 |
-| SuperDroid IG52 | 90.00 | ~$3,750 | Mecanum (chain-driven) | $41.66 |
+| MICKY | 32.55 | ~$1647.12 | Mecanum (4 rodas) | $50.60 |
+| Wheeltec R550 | 15.00 | ~$532 | Mecanum (4 rodas) | $35.46 |
+| myAGV 2023 Pi | 5.00 | ~$949 | Mecanum (planetário) | $189.80 |
+| Mecabot Pro | 22.00 | ~$6,918 | Mecanum (com suspensão) | $314.45 |
+| SuperDroid IG52 | 90.00 | ~$3,750 | Mecanum (com corrente) | $41.66 |
 | AGV Pro | 50.00 | ~$6,000* | Mecanum/Omni | $120.00 |
 | TIAGo OMNI Base | 100.00 | ~$15,000* | Mecanum (industrial) | $150.00 |
-| TidyBot++ | 90.00 | ~$10,000* | Powered casters | $111.11 |
+| TidyBot++ | 90.00 | ~$10,000* | Rodas caster motorizadas | $111.11 |
 
 ---
 
-## 3. Cost vs. Payload Analysis
+## 3. Análise Custo vs. Carga Útil
 
-The scatter plot (represented by the axes below) allows identification of design efficiency. Platforms located in the lower-right quadrant represent the highest payload delivery per dollar invested.
+O gráfico de dispersão (representado pelos eixos abaixo) permite identificar a eficiência de cada projeto. Plataformas localizadas no quadrante inferior direito representam maior entrega de carga útil por custo investido.
 
 ![Graph](../../_static/cost_analysis.png)
 
-### 3.1 MICKY Positioning Discussion
+### 3.1 Discussão sobre o Posicionamento do MICKY
 
-The analysis reveals that MICKY occupies an **Efficiency Anomaly** niche.
+A análise mostra que o MICKY ocupa um nicho de **anomalia de eficiência**.
 
 - **MICKY vs. myAGV 2023 Pi:**  
-While the cost is higher (~$1647 vs $949), MICKY delivers **6.5× more payload** (32.55 kg vs 5 kg). This highlights a significantly better cost-to-performance ratio in practical applications.
+Embora o custo seja maior (~$1647 vs $949), o MICKY oferece **6,5× mais carga útil** (32,55 kg vs 5 kg), evidenciando uma relação custo-desempenho significativamente superior em aplicações práticas.
 
 - **MICKY vs. Mecabot Pro:**  
-Mecabot Pro costs over four times more, yet its payload is **32% lower (22 kg)**. MICKY demonstrates that higher mechanical traction capacity can be achieved using industrial COTS components at a fraction of the cost.
+O Mecabot Pro custa mais de quatro vezes mais, porém sua carga útil é **32% menor (22 kg)**. O MICKY demonstra que é possível alcançar alta capacidade de tração mecânica utilizando componentes COTS industriais a uma fração do custo.
 
-### 3.2 The Industrial Challenge: TIAGo OMNI Base and SuperDroid
+### 3.2 O Desafio Industrial: TIAGo OMNI Base e SuperDroid
 
-These platforms represent the upper limits of payload capacity.
+Essas plataformas representam os limites superiores de capacidade de carga.
 
 - **TIAGo OMNI Base:**  
-It is a benchmark in service robotics design. With 207 mm wheels and industrial-grade motors, it supports a 100 kg payload. MICKY achieves **~32% of this payload at ~11% of the cost**, making it a viable alternative for budget-constrained laboratories.
+É uma referência em robótica de serviço. Com rodas de 207 mm e motores de nível industrial, suporta até 100 kg de carga útil. O MICKY atinge **~32% dessa capacidade com ~11% do custo**, tornando-se uma alternativa viável para laboratórios com orçamento limitado.
 
 - **SuperDroid IG52:**  
-Achieves payloads of 90 kg through a chain reduction system (10:15). While effective for heavy loads, the chain system requires lubrication and tension adjustment, whereas MICKY’s direct coupling reduces mechanicalmaintenance.
+Alcança cargas de até 90 kg por meio de um sistema de redução por corrente (10:15). Embora eficiente para cargas elevadas, esse sistema requer lubrificação e ajuste de tensão, enquanto o acoplamento direto do MICKY reduz a necessidade de manutenção mecânica.
 
 </div>

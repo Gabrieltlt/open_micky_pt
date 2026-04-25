@@ -1,53 +1,53 @@
-# 🛠️ Hardware Overview 🛠️
+# 🛠️ Visão Geral do Hardware
 
 <div style="text-align: justify;">
 
-MICKY is a modular industrial mobile robot designed for low-cost development, reproducibility, and real-world industrial applications.
+O MICKY é um robô móvel industrial modular, projetado para desenvolvimento de baixo custo, reprodutibilidade e aplicações industriais no mundo real.
 
-The system is composed of three main modules: a mobile base responsible for locomotion, a lower module dedicated to power and electronics, and an upper module for interaction, perception, and user interface.
-
----
-
-## System Composition
-
-The robot is structured as:
-
-* **Base Module** — locomotion system with motors and wheels
-* **Lower Module** — power distribution, batteries, and drivers
-* **Upper Module** — sensors, interface, and computation
-
-This modular architecture enables easy assembly, maintenance, and future upgrades.
+O sistema é composto por três módulos principais: uma base móvel responsável pela locomoção, um módulo inferior dedicado à alimentação e eletrônica, e um módulo superior voltado à interação, percepção e interface com o usuário.
 
 ---
 
-## Power System
+## Composição do Sistema
 
-The robot is powered by a distributed battery system designed for flexibility and scalability.
+O robô é estruturado da seguinte forma:
 
-The design supports up to four batteries, where:
+* **Módulo Base** — sistema de locomoção com motores e rodas
+* **Módulo Inferior** — distribuição de energia, baterias e drivers
+* **Módulo Superior** — sensores, interface e computação
 
-* two are dedicated to the locomotion system
-* two can be used for external computing or additional subsystems
-
-This separation improves system stability and allows independent power management.
-
----
-
-## Design Philosophy
-
-The robot was designed with the following principles:
-
-* **Accessibility** — use of low-cost and easy-to-source components
-* **Reproducibility** — all parts can be manufactured or purchased globally
-* **Modularity** — components can be replaced or upgraded independently
-* **Robustness** — structural reinforcement using aluminum profiles and mechanical supports
+Essa arquitetura modular permite montagem simplificada, manutenção facilitada e futuras expansões.
 
 ---
 
-## Notes
+## Sistema de Alimentação
 
-All structural components are designed to be compatible with aluminum profiles and 3D printed mounts, ensuring a balance between rigidity and manufacturing simplicity.
+O robô é alimentado por um sistema distribuído de baterias, projetado para oferecer flexibilidade e escalabilidade.
 
-For detailed part lists and fabrication instructions, refer to the Bill of Materials and 3D Printing sections.
+O design suporta até quatro baterias, sendo:
+
+* duas dedicadas ao sistema de locomoção
+* duas destinadas a computação externa ou subsistemas adicionais
+
+Essa separação melhora a estabilidade do sistema e permite gerenciamento independente da energia.
+
+---
+
+## Filosofia de Projeto
+
+O robô foi desenvolvido com base nos seguintes princípios:
+
+* **Acessibilidade** — uso de componentes de baixo custo e fácil aquisição
+* **Reprodutibilidade** — todas as peças podem ser fabricadas ou adquiridas globalmente
+* **Modularidade** — os componentes podem ser substituídos ou atualizados de forma independente
+* **Robustez** — reforço estrutural com perfis de alumínio e suportes mecânicos
+
+---
+
+## Observações
+
+Todos os componentes estruturais foram projetados para serem compatíveis com perfis de alumínio e suportes impressos em 3D, garantindo um equilíbrio entre rigidez e simplicidade de fabricação.
+
+Para listas detalhadas de componentes e instruções de fabricação, consulte as seções de **Lista de Materiais** e **Impressão 3D**.
 
 </div>

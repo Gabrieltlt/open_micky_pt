@@ -1,95 +1,95 @@
-# ⚒️ Assembly
+# ⚒️ Montagem
 
 <div style="text-align: justify;">
 
 ![Robot overview](../../_static/robot.jpeg)
 
-This section describes the assembly process of the MICKY robot, including mechanical construction, PCB fabrication, and electronic integration.
+Esta seção descreve o processo de montagem do robô MICKY, incluindo a construção mecânica, fabricação das placas de circuito impresso (PCB) e integração eletrônica.
 
 ---
 
-## Mechanical Assembly
+## Montagem Mecânica
 
-This section will describe the mechanical assembly of the robot, including the structural frame and mounting process.
-
----
-
-## Electronics Assembly
-
-This section describes the electrical assembly of the robot, including PCB fabrication, wiring, and integration of electronic components.
-
-### PCB Fabrication
-
-This section describes the process used to manufacture the custom Printed Circuit Boards (PCBs) developed for the MICKY robot. The boards were produced using a low-cost and accessible method, allowing easy replication without specialized equipment.
-
-### Required Materials
-
-- Copper-clad board  
-- Photographic paper  
-- Ferric chloride solution  
-- Any heat-generating surface  
-- Permanent marker  
-
-### Fabrication Process
-
-1. **Print the PCB layout**  
-   Print the PCB design at a 1:1 scale on photographic paper.
-
-2. **Transfer the layout**  
-   Place the printed layout face-down on the copper board.  
-   Apply heat and pressure using an iron to transfer the ink onto the copper surface.
-
-3. **Remove the paper**  
-   Carefully remove the photographic paper using a gentle stream of water.  
-
-4. **Fix imperfections**  
-   Use a permanent marker to correct any broken traces.
-
-5. **Etching process**  
-   Submerge the board in ferric chloride solution to remove the exposed copper.
-
-6. **Cleaning and finishing**  
-   Clean and sand the board to remove the ink.  
-   The PCB is now ready for soldering.
+Esta seção descreve a montagem mecânica do robô, incluindo a estrutura principal e o processo de fixação dos componentes.
 
 ---
 
-### Custom Boards
+## Montagem Eletrônica
 
-These custom boards were designed to simplify system integration and ensure reliable power distribution and signal connectivity across the platform. Each board targets a specific subsystem, contributing to a modular and easily maintainable architecture.
+Esta seção descreve a montagem elétrica do robô, incluindo a fabricação das PCBs, cabeamento e integração dos componentes eletrônicos.
 
-#### Arduino Interface Board
+### Fabricação das PCBs
 
-- Arduino Mega 2560  
-- Capacitor (63 V / 4700 µF)  
-- Resistor (3.3 kΩ)  
-- 20 A diode  
-- XT60 connectors (4x)  
-- JST-XH 5-pin connectors (2x)  
-- JST-XH 4-pin connectors (2x)  
-- JST-XH 2-pin connector  
+Esta seção descreve o processo utilizado para fabricar as Placas de Circuito Impresso (PCBs) desenvolvidas para o robô MICKY. As placas foram produzidas utilizando um método de baixo custo e acessível, permitindo fácil replicação sem a necessidade de equipamentos especializados.
+
+### Materiais Necessários
+
+- Placa cobreada
+- Papel fotográfico
+- Solução de cloreto férrico
+- Superfície geradora de calor
+- Marcador permanente
+
+### Processo de Fabricação
+
+1. **Impressão do layout da PCB**  
+   Imprima o design da PCB em escala 1:1 em papel fotográfico.
+
+2. **Transferência do layout**  
+   Posicione o layout impresso com a face voltada para baixo sobre a placa cobreada.
+   Aplique calor e pressão utilizando um ferro de passar para transferir a tinta para a superfície do cobre.
+
+3. **Remoção do papel**  
+   Remova cuidadosamente o papel fotográfico utilizando um fluxo leve de água.
+
+4. **Correção de imperfeições**  
+   Utilize um marcador permanente para corrigir trilhas interrompidas.
+
+5. **Processo de corrosão**  
+   Submerja a placa na solução de cloreto férrico para remover o cobre exposto.
+
+6. **Limpeza e acabamento**  
+   Limpe e lixe a placa para remover a tinta.
+   A PCB estará pronta para soldagem.
+
+---
+
+### Placas Personalizadas
+
+Essas placas foram projetadas para simplificar a integração do sistema e garantir distribuição de energia confiável e conectividade de sinais em toda a plataforma. Cada placa atende a um subsistema específico, contribuindo para uma arquitetura modular e de fácil manutenção.
+
+#### Placa de Interface do Arduino
+
+- Arduino Mega 2560
+- Capacitor (63 V / 4700 µF)
+- Resistor (3,3 kΩ)
+- Diodo de 20 A
+- Conectores XT60 (4x)
+- Conectores JST-XH de 5 pinos (2x)
+- Conectores JST-XH de 4 pinos (2x)
+- Conector JST-XH de 2 pinos
 
 ![Arduino PCB](../../_static/pcbs/arduino.jpeg)
 
 ---
 
-#### Motor Driver Board
+#### Placa dos Drivers de Motor
 
-- 20 A diodes (2x)  
-- XT60 connectors (3x)  
-  - 1x male  
-  - 2x female  
-- JST-XH 5-pin connector  
-- JST-XH 4-pin connectors (2x)  
+- Diodos de 20 A (2x)
+- Conectores XT60 (3x)
+   - 1x macho
+   - 2x fêmea
+- Conector JST-XH de 5 pinos
+- Conectores JST-XH de 4 pinos (2x)
 
 ![Driver PCB](../../_static/pcbs/drivers.jpeg)
 
 ---
 
-#### IMU Board
+#### Placa da IMU
 
-- JST-XH 4-pin connector  
-- MPU9250 IMU  
+- Conector JST-XH de 4 pinos
+- IMU MPU9250
 
 <div align="center">
 <img src="../../_static/pcbs/imu_1.jpeg" width="45%">
@@ -99,6 +99,7 @@ These custom boards were designed to simplify system integration and ensure reli
 ---
 
 ```{important}
-Ferric chloride is corrosive. Always use protective equipment and work in a ventilated environment.
+O cloreto férrico é corrosivo. Utilize sempre equipamentos de proteção e trabalhe em um ambiente ventilado.
+```
 
 </div>

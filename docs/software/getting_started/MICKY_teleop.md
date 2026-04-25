@@ -1,20 +1,20 @@
-# 🎮 MICKY Teleop
+# 🎮 Teleop do MICKY
 
 <div style="text-align: justify;">
 
-This section guides you through running the MICKY teleoperation.
+Esta seção orienta você na execução do controle manual (teleoperação) do MICKY.
 
 ---
 
-## Keyboard Teleop
+## Teleop com Teclado
 
-After installing all required packages, connect the Arduino board (already configured according to the installation guide) to your computer.
+Após instalar todos os pacotes necessários, conecte a placa Arduino (já configurada conforme o guia de instalação) ao seu computador.
 
-Then, open two terminals.
+Em seguida, abra dois terminais.
 
 ---
 
-In the first terminal, run:
+No primeiro terminal, execute:
 
 ```bash
 ros2 launch motors_controller motors_controller.launch.py
@@ -22,7 +22,7 @@ ros2 launch motors_controller motors_controller.launch.py
 
 ---
 
-In the second terminal, run:
+No segundo terminal, execute:
 
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -30,29 +30,29 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 ---
 
-Use the following keys to control the robot:
+Use as seguintes teclas para controlar o robô:
 
-| Key | Action |
-|-----|--------|
-| `i` | Move forward |
-| `,` | Move backward |
-| `j` | Turn left |
-| `l` | Turn right |
-| `u` | Forward + left |
-| `o` | Forward + right |
-| `m` | Backward + left |
-| `.` | Backward + right |
-| `k` | Stop the robot |
-
----
-
-## Joystick Teleop
-
-It is also possible to control the robot using a Logitech game controller.
+| Tecla | Ação |
+|-------|------|
+| `i` | Avançar |
+| `,` | Recuar |
+| `j` | Girar à esquerda |
+| `l` | Girar à direita |
+| `u` | Frente + esquerda |
+| `o` | Frente + direita |
+| `m` | Trás + esquerda |
+| `.` | Trás + direita |
+| `k` | Parar o robô |
 
 ---
 
-### Install Required Packages
+## Teleop com Joystick
+
+Também é possível controlar o robô utilizando um controle Logitech.
+
+---
+
+### Instalar Pacotes Necessários
 
 ```bash
 sudo apt install ros-humble-joy ros-humble-teleop-twist-joy
@@ -60,11 +60,11 @@ sudo apt install ros-humble-joy ros-humble-teleop-twist-joy
 
 ---
 
-### Connect the Controller
+### Conectar o Controle
 
-Connect the Logitech controller via USB or Bluetooth, and run the commands below:
+Conecte o controle Logitech via USB ou Bluetooth e execute os comandos abaixo:
 
-To verify that it is detected:
+Para verificar se foi reconhecido:
 
 ```bash
 ls /dev/input/js0
@@ -72,7 +72,7 @@ ls /dev/input/js0
 
 ---
 
-In the first terminal, run:
+No primeiro terminal, execute:
 
 ```bash
 ros2 launch motors_controller motors_controller.launch.py
@@ -80,7 +80,7 @@ ros2 launch motors_controller motors_controller.launch.py
 
 ---
 
-In a second terminal, run:
+No segundo terminal, execute:
 
 ```bash
 ros2 run joy joy_node
@@ -88,7 +88,7 @@ ros2 run joy joy_node
 
 ---
 
-In a third terminal, run:
+No terceiro terminal, execute:
 
 ```bash
 ros2 run teleop_twist_joy teleop_node
@@ -96,9 +96,9 @@ ros2 run teleop_twist_joy teleop_node
 
 ---
 
-### Controls
+### Controles
 
-- Left analog stick → linear motion (forward/backward and lateral)
-- Right analog stick → rotation
+- Analógico esquerdo → movimento linear (frente/trás e lateral)
+- Analógico direito → rotação
 
 </div>

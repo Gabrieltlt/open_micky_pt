@@ -2,20 +2,20 @@
 
 <div style="text-align: justify;">
 
-## 💵 Total Cost
+## 💵 Custo Total
 
-> Cost excludes 3D printing, tools, shipping, and taxes.
+> O custo não inclui impressão 3D, ferramentas, frete e impostos.
 > 
 
-| Price | BRL | EUR | USD |
+| Preço | BRL | EUR | USD |
 |-------|:---:|:---:|:---:|
-| Structural Components | ~R$2103.18 | ~€458.66 | ~$1064.58 |
-| Electrical System | ~R$902.4 | ~€406.47 | ~$200.81 |
-| Locomotion System | ~R$2834.46 | ~€330.36 | ~$381.73 |
+| Componentes Estruturais | ~R$2103.18 | ~€458.66 | ~$1064.58 |
+| Sistema Elétrico | ~R$902.4 | ~€406.47 | ~$200.81 |
+| Sistema de Locomoção | ~R$2834.46 | ~€330.36 | ~$381.73 |
 | **Total** | **~R$5840.04** | **~€1195.49** | **~$1647.12** |
 
 
-## 🚀 Get Started
+## 🚀 Primeiros Passos
 
 ```{toctree}
 :caption: Hardware Intro
