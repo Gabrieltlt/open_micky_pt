@@ -96,6 +96,10 @@ Essas placas foram projetadas para simplificar a integração do sistema e garan
 <img src="../../_static/pcbs/imu_2.jpeg" width="45%">
 </div>
 
+Para suportar o uso de duas IMUs no sistema, ambas as PCBs foram projetadas para simplificar sua integração com o restante da eletrônica. Porém, como ambos os sensores compartilham o mesmo barramento de comunicação, é necessário diferenciá-los através do endereçamento I2C.
+
+Isto é conseguido modificando a configuração do pino AD0: uma das placas IMU inclui um traço externo conectando o pino AD0 ao GND, alterando seu endereço I2C, enquanto a outra mantém a configuração interna padrão.
+
 ---
 
 ```{important}
