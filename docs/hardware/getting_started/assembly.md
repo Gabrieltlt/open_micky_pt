@@ -10,7 +10,13 @@ Esta seção descreve o processo de montagem do robô MICKY, incluindo a constru
 
 ## Montagem Mecânica
 
-Esta seção descreve a montagem mecânica do robô, incluindo a estrutura principal e o processo de fixação dos componentes.
+Esta seção mostra a montagem mecânica do robô MICKY.
+
+<iframe width="800" height="600" 
+    src="https://www.youtube.com/embed/PALwkMxWDME"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
 
 ---
 
