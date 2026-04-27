@@ -13,7 +13,7 @@ Esta seção descreve o processo de montagem do robô MICKY, incluindo a constru
 Esta seção mostra a montagem mecânica do robô MICKY.
 
 <iframe width="800" height="600" 
-    src="https://www.youtube.com/embed/PALwkMxWDME"
+    src="https://www.youtube.com/embed/L_kPBL3wr8g"
     frameborder="0" 
     allowfullscreen>
 </iframe>
